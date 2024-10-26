@@ -13,5 +13,8 @@ server.on("connection", (socket) => {
     });
     socket.on("close", () => console.log("Client disconnected"));
 });
-
+const PORT = 3000;
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 console.log("Signaling server running on ws://localhost:3000");
